@@ -1,0 +1,108 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_age"
+	group: "49DB974EABAC0582"
+	icon: "create:wrench"
+	id: "1AEB0DA0B6A214E2"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["32316D3D8D550837"]
+			id: "6CA8DEFC2A73079A"
+			tasks: [{
+				id: "38202367815535E4"
+				title: "good start"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6CA8DEFC2A73079A"]
+			id: "013AC85D4DF8E66F"
+			tasks: [{
+				id: "0CD0A4795D114072"
+				item: "create:depot"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["013AC85D4DF8E66F"]
+			id: "1B4C0C7B4FBFB255"
+			tasks: [{
+				id: "4353098782102C9F"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"1B4C0C7B4FBFB255"
+				"4D923E8E49E593A6"
+			]
+			id: "6BF497AF1410E528"
+			tasks: [{
+				id: "5F7F433A36015156"
+				item: "create:brass_ingot"
+				type: "item"
+			}]
+			title: "brass age"
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1B4C0C7B4FBFB255"]
+			icon: "minecraft:copper_ingot"
+			id: "4D923E8E49E593A6"
+			tasks: [
+				{
+					id: "56167E1AC46C7504"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "13D47F4B15B76C7C"
+					item: "create:zinc_ingot"
+					type: "item"
+				}
+			]
+			title: "brass resources"
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6BF497AF1410E528"]
+			id: "2A095D5BF404A450"
+			tasks: [{
+				id: "3C7C370FF82216DD"
+				item: "create:brass_casing"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2A095D5BF404A450"]
+			icon: "create:crushing_wheel"
+			id: "25066414343F5752"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 21L
+				id: "4B0883D98030FDEE"
+				item: "create:mechanical_crafter"
+				type: "item"
+			}]
+			title: "crushing weels"
+			x: 5.0d
+			y: -3.0d
+		}
+	]
+	title: "create age"
+}

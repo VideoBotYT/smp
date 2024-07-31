@@ -15,5 +15,7 @@ patchouli_data.json
 servers.dat
 servers.data_old
 smp.jar
-userscache.json
+usercache.json
 usernamecache.json
+/.probe
+/.vscode

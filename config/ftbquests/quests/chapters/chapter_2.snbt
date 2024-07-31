@@ -1,0 +1,98 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chapter_2"
+	group: "40759A2CECBE4981"
+	icon: "create:andesite_alloy"
+	id: "32316D3D8D550837"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["07AF0D7C0F402921"]
+			id: "79E5322FFEF87788"
+			tasks: [{
+				id: "106850984482517C"
+				title: "start"
+				type: "checkmark"
+			}]
+			x: -11.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["79E5322FFEF87788"]
+			id: "56C5D7344B487AFF"
+			shape: "rsquare"
+			tasks: [{
+				id: "589F26F478EC2379"
+				item: "minecraft:andesite"
+				type: "item"
+			}]
+			title: "create start"
+			x: -9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["56C5D7344B487AFF"]
+			id: "62343E7F26A08587"
+			rewards: [
+				{
+					id: "7235213D6480D705"
+					item: "create:basin"
+					type: "item"
+				}
+				{
+					id: "3822F5BC9A0E7146"
+					item: "create:andesite_casing"
+					type: "item"
+				}
+				{
+					id: "4DC4E52D429CAE55"
+					item: "create:whisk"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "55DE616761432F2D"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "andesite time"
+			x: -7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["62343E7F26A08587"]
+			icon: "create:wrench"
+			id: "51822880221D087B"
+			rewards: [{
+				id: "413A50468DD285C4"
+				item: "create:wrench"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{
+					id: "366AA48DA7394444"
+					item: "create:mechanical_saw"
+					type: "item"
+				}
+				{
+					id: "759DF80530EC4A85"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "507BC56F7BDA7B4A"
+					item: "create:mechanical_mixer"
+					type: "item"
+				}
+			]
+			title: "wrench"
+			x: -4.5d
+			y: 0.75d
+		}
+	]
+	title: "chapter 2"
+}

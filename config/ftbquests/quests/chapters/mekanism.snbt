@@ -1,0 +1,136 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mekanism"
+	group: "49DB974EABAC0582"
+	id: "2A84655FEADC750D"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1AEB0DA0B6A214E2"]
+			id: "3D606A5E698292A8"
+			tasks: [{
+				id: "35CC7BF9F9A41BFD"
+				title: "TechStart"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D606A5E698292A8"]
+			id: "145D594EED3C181C"
+			tasks: [{
+				count: 64L
+				id: "371E5F2B5C2889B2"
+				item: "mekanismgenerators:fusion_reactor_frame"
+				type: "item"
+			}]
+			title: "fusion start"
+			x: -3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"3D606A5E698292A8"
+				"145D594EED3C181C"
+			]
+			id: "1E5DDD6AA616F9D9"
+			tasks: [{
+				count: 3L
+				id: "51C4181605DBF241"
+				item: { Count: 3, id: "mekanismgenerators:fusion_reactor_port" }
+				type: "item"
+			}]
+			title: "fusion progression"
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"145D594EED3C181C"
+				"1E5DDD6AA616F9D9"
+			]
+			id: "3AA564DFFA878D48"
+			tasks: [{
+				id: "16BC42F2E3E4CDC7"
+				item: "mekanismgenerators:fusion_reactor_controller"
+				type: "item"
+			}]
+			title: "fusion final steps"
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3AA564DFFA878D48"]
+			id: "74CA75BF0157EA0E"
+			optional: true
+			tasks: [{
+				count: 64L
+				id: "1E6ED4095C95F35B"
+				item: { Count: 64, id: "mekanismgenerators:reactor_glass" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3AA564DFFA878D48"]
+			icon: "mekanism:laser"
+			id: "5D2B7D5779A8F0A1"
+			tasks: [
+				{
+					id: "21BADBC415823C57"
+					item: "mekanism:laser"
+					type: "item"
+				}
+				{
+					id: "2CACD5DB708EA0E6"
+					item: "mekanismgenerators:laser_focus_matrix"
+					type: "item"
+				}
+				{
+					id: "60A879524C924DFD"
+					item: "mekanism:laser_amplifier"
+					type: "item"
+				}
+			]
+			title: "fusion charge"
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5D2B7D5779A8F0A1"
+				"3AA564DFFA878D48"
+			]
+			id: "1A6356DB4DB4BD4B"
+			shape: "pentagon"
+			size: 2.0d
+			tasks: [{
+				id: "74F59A4E5502236E"
+				item: {
+					Count: 1
+					id: "mekanismgenerators:hohlraum"
+					tag: {
+						mekData: {
+							GasTanks: [{
+								Tank: 0b
+								stored: {
+									amount: 10L
+									gasName: "mekanismgenerators:fusion_fuel"
+								}
+							}]
+						}
+					}
+				}
+				type: "item"
+			}]
+			title: "fusion startup"
+			x: 1.0d
+			y: -1.0d
+		}
+	]
+	title: "mekanism"
+}

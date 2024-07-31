@@ -1,0 +1,6 @@
+{
+	chapter_groups: [
+		{ id: "40759A2CECBE4981", title: "beginning chapters" }
+		{ id: "49DB974EABAC0582", title: "mid chapters" }
+	]
+}
