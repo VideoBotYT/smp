@@ -6,14 +6,24 @@ ServerEvents.recipes(event => {
     ], {
         L: '#minecraft:logs'
     })
+    event.shaped(
+        Item.of("minecraft:hopper", 1), [
+        'ILI',
+        'ILI',
+        ' I '
+    ], {
+        L: '#minecraft:logs',
+        I: 'minecraft:iron_ingot'
+    })
 
     event.recipes.createMechanicalCrafting('ad_astra:launch_pad', [
-        'SSS',
+        'RSR',
         'SPS',
-        'SSS'
+        'RSR'
     ], {
         S: 'mekanism:block_steel',
-        P: 'create:iron_sheet'
+        P: 'create:iron_sheet',
+        R: 'ad_astra:steel_rod'
     })
     event.recipes.createMechanicalCrafting('ad_astra:tier_1_rocket', [
         '  N  ',
@@ -46,7 +56,7 @@ ServerEvents.recipes(event => {
         S: '#create:seats',
         F: 'ad_astra:rocket_fin',
         E: 'ad_astra:desh_engine',
-		T: 'ad_astra:desh_tank',
+        T: 'ad_astra:desh_tank',
         P: 'create:iron_sheet',
         V: 'ad_astra:vent'
     })
@@ -55,8 +65,8 @@ ServerEvents.recipes(event => {
         '  OOO  ',
         '  PVP  ',
         '  BBB  ',
-        '  BSB  ',
         '  BGB  ',
+        '  BSB  ',
         'F BBB F',
         'FRTTTRF',
         'E  E  E'
@@ -75,17 +85,16 @@ ServerEvents.recipes(event => {
     })
     event.recipes.createMechanicalCrafting('ad_astra:tier_4_rocket', [
         '    N    ',
-        '   PVP   ',
-        '   BBB   ',
-        '   BSB   ',
+        '   BVB   ',
         '   BGB   ',
+        '   BSB   ',
         'F  BBB  F',
         'F  CCC  F',
         'FRRTTTRRF',
+        'R   R   R',
         'E   E   E'
     ], {
         N: 'ad_astra:rocket_nose_cone',
-        P: 'create:iron_sheet',
         V: 'ad_astra:vent',
         B: 'mekanism:block_steel',
         C: 'ad_astra:calorite_plate',
@@ -97,8 +106,22 @@ ServerEvents.recipes(event => {
         G: '#forge:glass'
     })
 
+    event.recipes.createSequencedAssembly([
+        'create:precision_mechanism'
+    ], 'create:golden_sheet', [
+        event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel']),
+
+        event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'minecraft:gold_nugget']),
+
+        event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'minecraft:iron_nugget']),
+        event.recipes.create.pressing('create:incomplete_precision_mechanism', 'create:precision_mechanism')
+    ]).transitionalItem('create:incomplete_precision_mechanism').loops(3)
+
+
     event.remove({ id: 'ad_astra:nasa_workbench/tier_1_rocket' })
-	event.remove({ id: 'ad_astra:nasa_workbench/tier_2_rocket' })
-	event.remove({ id: 'ad_astra:nasa_workbench/tier_3_rocket' })
-	event.remove({ id: 'ad_astra:nasa_workbench/tier_4_rocket' })
+    event.remove({ id: 'ad_astra:nasa_workbench/tier_2_rocket' })
+    event.remove({ id: 'ad_astra:nasa_workbench/tier_3_rocket' })
+    event.remove({ id: 'ad_astra:nasa_workbench/tier_4_rocket' })
+    event.remove({ id: 'ad_astra:launch_pad' })
+    event.remove({ id: 'create:sequenced_assembly/precision_mechanism' })
 })
