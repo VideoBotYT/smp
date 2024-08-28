@@ -1,0 +1,4 @@
+#572 terralith:arid_highlands
+#184 terralith:brushland
+#1A6 terralith:cave/granite_caves
+#5FF minecraft:river

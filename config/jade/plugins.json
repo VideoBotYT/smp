@@ -1,6 +1,6 @@
 {
-  "enderchests": {
-    "hud": true
+  "framedblocks": {
+    "framed_item_frame": true
   },
   "minecraft": {
     "item_storage.show_name_amount": 5,
@@ -53,6 +53,33 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "jade": {
+    "coordinates.rel": true,
+    "distance": false,
+    "block_face": true,
+    "coordinates": true,
+    "registry_name": "ON",
+    "mod_name": true
+  },
+  "lootr": {
+    "info": true
+  },
+  "ae2": {
+    "part_icon": true,
+    "charger": true,
+    "debug": true,
+    "part_tooltip": true,
+    "grid_node_state": true,
+    "pattern_provider": true,
+    "part_mod_name": true,
+    "power_storage": true,
+    "crafting_monitor": true,
+    "part_name": true
+  },
+  "tesseract": {
+    "tesseract": true,
+    "remove_default": true
+  },
   "jadeaddons": {
     "equipment_requirement": ""
   },
@@ -66,11 +93,6 @@
     "energy": true,
     "tooltip_renderer": true
   },
-  "shetiphiancore": {
-    "hud.rgb16": true,
-    "hud": true,
-    "hud.redstone": true
-  },
   "easy_villagers": {
     "villager": true,
     "converter": true,
@@ -78,14 +100,6 @@
   },
   "twilightforest": {
     "quest_ram_wool": true
-  },
-  "jade": {
-    "coordinates.rel": true,
-    "distance": false,
-    "block_face": true,
-    "coordinates": true,
-    "registry_name": "ON",
-    "mod_name": true
   },
   "create": {
     "filter": true,
@@ -103,18 +117,6 @@
   },
   "gravestone": {
     "grave": true
-  },
-  "ae2": {
-    "part_icon": true,
-    "charger": true,
-    "debug": true,
-    "part_tooltip": true,
-    "grid_node_state": true,
-    "pattern_provider": true,
-    "part_mod_name": true,
-    "power_storage": true,
-    "crafting_monitor": true,
-    "part_name": true
   },
   "storagedrawers": {
     "display.stacklimit": true,

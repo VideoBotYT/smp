@@ -15,6 +15,21 @@ ServerEvents.recipes(event => {
         L: '#minecraft:logs',
         I: 'minecraft:iron_ingot'
     })
+    event.shaped(
+        Item.of('minecraft:string', 4), [
+        'W'
+    ], {
+        W: '#minecraft:wool'
+    })
+
+    event.shaped(
+        Item.of('#minecraft:wool', 2), [
+        'C',
+        'C',
+        'C'
+    ], {
+        C: '#minecraft:wool_carpets'
+    })
 
     event.recipes.createMechanicalCrafting('ad_astra:launch_pad', [
         'RSR',
@@ -117,6 +132,34 @@ ServerEvents.recipes(event => {
         event.recipes.create.pressing('create:incomplete_precision_mechanism', 'create:precision_mechanism')
     ]).transitionalItem('create:incomplete_precision_mechanism').loops(3)
 
+    event.recipes.createSequencedAssembly([
+        'easy_villagers:trader'
+    ], 'create:iron_sheet', [
+        event.recipes.createDeploying('kubejs:incomplete_trader', ['kubejs:incomplete_trader', '#forge:glass']),
+        event.recipes.create.pressing('kubejs:incomplete_trader', 'easy_villagers:trader')
+    ]).transitionalItem('kubejs:incomplete_trader').loops(4)
+
+    event.recipes.createDeploying('easy_villagers:breeder', ['easy_villagers:trader', 'minecraft:red_bed'])
+
+    event.recipes.createDeploying('easy_villagers:auto_trader', ['easy_villagers:trader', 'minecraft:netherite_ingot'])
+
+    event.recipes.createDeploying('easy_villagers:farmer', ['easy_villagers:trader', 'minecraft:dirt'])
+
+    event.recipes.createDeploying('easy_villagers:converter', ['easy_villagers:trader', 'minecraft:rotten_flesh'])
+
+    event.recipes.createDeploying('easy_villagers:iron_farm', ['easy_villagers:trader', 'minecraft:stone'])
+
+    event.recipes.createDeploying('easy_villagers:incubator', ['easy_villagers:trader', 'minecraft:white_wool'])
+    event.recipes.createMixing('ae2:certus_quartz_crystal', [
+        'quartz',
+        'redstone',
+        'glowstone'
+    ]).heated()
+
+    event.recipes.create.pressing('create:analog_lever', 'lever')
+    event.recipes.createCompacting('minecraft:coal', ['mekanism:block_charcoal'])
+    event.recipes.createCompacting('minecraft:diamond', ['minecraft:coal_block'])
+
 
     event.remove({ id: 'ad_astra:nasa_workbench/tier_1_rocket' })
     event.remove({ id: 'ad_astra:nasa_workbench/tier_2_rocket' })
@@ -124,4 +167,11 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'ad_astra:nasa_workbench/tier_4_rocket' })
     event.remove({ id: 'ad_astra:launch_pad' })
     event.remove({ id: 'create:sequenced_assembly/precision_mechanism' })
+    event.remove({ id: 'easy_villagers:trader' })
+    event.remove({ id: 'easy_villagers:breeder' })
+    event.remove({ id: 'easy_villagers:auto_trader' })
+    event.remove({ id: 'easy_villagers:converter' })
+    event.remove({ id: 'easy_villagers:farmer' })
+    event.remove({ id: 'easy_villagers:incubator' })
+    event.remove({ id: 'easy_villagers:iron_farm' })
 })

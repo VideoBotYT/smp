@@ -15,7 +15,7 @@
     "showPlacementPreview_comment": "Show a preview of part and facade placement",
     "showPlacementPreview": true,
     "notifyForFinishedCraftingJobs_comment": "Show toast when long-running crafting jobs finish.",
-    "notifyForFinishedCraftingJobs": true,
+    "notifyForFinishedCraftingJobs": false,
     "clearGridOnClose_comment": "Automatically clear the crafting/encoding grid when closing the terminal",
     "clearGridOnClose": false,
     "terminalMargin_comment": "The vertical margin to apply when sizing terminals. Used to make room for centered item mod search bars",
@@ -24,7 +24,7 @@
   "terminals": {
     "terminalStyle": "full",
     "pinAutoCraftedItems_comment": "Pin items that the player auto-crafts to the top of the terminal",
-    "pinAutoCraftedItems": true
+    "pinAutoCraftedItems": false
   },
   "search": {
     "searchModNameInTooltips_comment": "Should the mod name be included when searching in tooltips.",

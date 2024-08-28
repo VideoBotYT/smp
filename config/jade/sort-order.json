@@ -23,12 +23,14 @@
   "easy_villagers:converter": null,
   "easy_villagers:villager": null,
   "enderchests:hud": null,
+  "framedblocks:framed_item_frame": null,
   "gravestone:grave": null,
   "jade:block_face": null,
   "jade:distance": null,
   "jade:mod_name": null,
   "jade:object_name": null,
   "jade:registry_name": null,
+  "lootr:info": null,
   "lootr:inventory": null,
   "mekanism:data_provider": null,
   "mekanism:entity_data_provider": null,
@@ -75,6 +77,8 @@
   "minecraft:villager_profession": null,
   "minecraft:zombie_villager": null,
   "shetiphiancore:hud": null,
+  "tesseract:remove_default": null,
+  "tesseract:tesseract": null,
   "twilightforest:quest_ram_wool": null,
   "waystones:waystone": null
 }

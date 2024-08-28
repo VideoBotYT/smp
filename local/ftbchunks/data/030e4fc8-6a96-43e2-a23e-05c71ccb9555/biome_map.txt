@@ -1,0 +1,14 @@
+#53B terralith:cave/mantle_caves
+#46C nullscape:crystal_peaks
+#2DC minecraft:deep_dark
+#34D minecraft:deep_lukewarm_ocean
+#515 minecraft:end_highlands
+#5F0 biomesoplenty:pasture
+#3DC minecraft:plains
+#5FF minecraft:river
+#209 nullscape:shadowlands
+#2CF biomesoplenty:shrubland
+#255 minecraft:small_end_islands
+#400 minecraft:the_end
+#734 biomesoplenty:tropics
+#561 nullscape:void_barrens
